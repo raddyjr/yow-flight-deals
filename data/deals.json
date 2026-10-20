@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-20T00:56:04+00:00",
+  "generated_at": "2026-10-20T01:01:30+00:00",
   "origin": "YOW",
   "currency": "CAD",
-  "fares_scanned": 68,
+  "fares_scanned": 94,
   "deal_threshold_pct": 20,
   "demo": false,
   "deals": [
@@ -26,7 +26,9 @@
       "baseline_basis": "today",
       "savings_pct": 41,
       "is_deal": true,
-      "trend": [],
+      "trend": [
+        436
+      ],
       "other_dates": [
         {
           "departure": "2026-12-27",
@@ -58,11 +60,13 @@
       "return_stops": 0,
       "duration_min": 285,
       "link": "https://www.aviasales.com/search/YOW0712YYC14121?t=WS17966238001796637300000285YOWYYC17972406001797258600000240YYCYOW_367e2c17ea227560cdf71babd82789a6_11176&search_date=19102026&expected_price_uuid=01a151fa-6c03-8040-6bc9-90d24b2cb247&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=nL1DGwWfhN9h3QzrF7mE9A&expected_price_source=share&expected_price_currency=cad&expected_price=187",
-      "usual_price": 276,
+      "usual_price": 289,
       "baseline_basis": "today",
-      "savings_pct": 32,
+      "savings_pct": 35,
       "is_deal": true,
-      "trend": [],
+      "trend": [
+        187
+      ],
       "other_dates": [
         {
           "departure": "2026-11-03",
@@ -100,11 +104,13 @@
       "return_stops": 2,
       "duration_min": 319,
       "link": "https://www.aviasales.com/search/YOW3003CUN09041?t=AC18064038001806442800000710YOWYULCUN18073026001807350060000731CUNYYZYULYOW_3db56057153aa69ad456c8470b990488_26560&search_date=15102026&expected_price_uuid=01a13edc-c6bb-8040-6d81-572141c04b7c&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=8L2hxsBQwxwq5D1EuI3kDQ&expected_price_source=share&expected_price_currency=cad&expected_price=451",
-      "usual_price": 544,
+      "usual_price": 554,
       "baseline_basis": "today",
-      "savings_pct": 17,
+      "savings_pct": 19,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        451
+      ],
       "other_dates": [
         {
           "departure": "2026-12-05",
@@ -117,6 +123,12 @@
           "return": "2027-04-10",
           "price": 563,
           "link": "https://www.aviasales.com/search/YOW3003CUN10041?t=AC18064152001806447600000600YOWYYZCUN18073656001807395960000446CUNYULYOW_209a3a6bedea553ffdedb9ea332446af_33036&search_date=19102026&expected_price_uuid=01a1547b-0711-8040-63d8-912f25d00cf0&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=TW3D-1qsxOzEJC6VnSbExA&expected_price_source=share&expected_price_currency=cad&expected_price=563"
+        },
+        {
+          "departure": "2026-12-27",
+          "return": "2026-12-30",
+          "price": 1031,
+          "link": "https://www.aviasales.com/search/YOW2712CUN30121?t=WS17983518001798393800000700YOWYYCCUN17986665001798760400001565CUNYYZYOW_3d4dd605b8b3820780fbaa35b9269ba3_61145&search_date=13102026&expected_price_uuid=01a13762-01a7-8040-adf1-b0e09bd041ed&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=d-p6pQood28gjbIkgFeCog&expected_price_source=share&expected_price_currency=cad&expected_price=1031"
         }
       ]
     },
@@ -140,7 +152,9 @@
       "baseline_basis": "today",
       "savings_pct": 17,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        685
+      ],
       "other_dates": [
         {
           "departure": "2026-12-23",
@@ -153,6 +167,68 @@
           "return": "2027-01-02",
           "price": 829,
           "link": "https://www.aviasales.com/search/YOW2912YMQ02011?t=WS17985222001798543800000360YOWYYZYUL17989200001798933200000220YULYYZYOW_9a88e65704bb9ed6a9e48f265bbcfbbc_49179&search_date=13102026&expected_price_uuid=01a13751-c0c2-8040-a460-5e7a2c7ab3e3&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=viiCITpAQmegMqejGLaoWQ&expected_price_source=share&expected_price_currency=cad&expected_price=829"
+        }
+      ]
+    },
+    {
+      "destination": "FLL",
+      "airport": "FLL",
+      "city": "Fort Lauderdale",
+      "country": "US",
+      "region": "USA",
+      "price": 441,
+      "currency": "CAD",
+      "departure": "2027-04-08",
+      "return": "2027-04-20",
+      "nights": 12,
+      "airline": "PD",
+      "stops": 1,
+      "return_stops": 1,
+      "duration_min": 275,
+      "link": "https://www.aviasales.com/search/YOW0804FLL20041?t=PD18071796001807213200000560YOWYYZFLL18082215001808243880000373FLLYYZYOW_e77626e582ce84fd7add6ce003ff9bcc_26352&search_date=19102026&expected_price_uuid=01a15177-a2c8-8040-a6ca-3f819d3e0787&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=izmdmRLxmSGfuwZewTsrNw&expected_price_source=share&expected_price_currency=cad&expected_price=441",
+      "usual_price": 491,
+      "baseline_basis": "today",
+      "savings_pct": 10,
+      "is_deal": false,
+      "trend": [],
+      "other_dates": [
+        {
+          "departure": "2027-02-01",
+          "return": "2027-02-04",
+          "price": 541,
+          "link": "https://www.aviasales.com/search/YOW0102FLL04021"
+        }
+      ]
+    },
+    {
+      "destination": "NQZ",
+      "airport": "NQZ",
+      "city": "Astana",
+      "country": "KZ",
+      "region": "Other",
+      "price": 2207,
+      "currency": "CAD",
+      "departure": "2027-07-01",
+      "return": "2027-07-22",
+      "nights": 21,
+      "airline": "LO",
+      "stops": 2,
+      "return_stops": 2,
+      "duration_min": 963,
+      "link": "https://www.aviasales.com/search/YOW0107NQZ22071?t=LO18144723001814603100001640YOWYYZWAWNQZ18162495001816301700001410NQZWAWYYZYOW_859f1da7f98cdc004d1704a957edc782_130889&search_date=13102026&expected_price_uuid=01a13766-7f0f-8040-236d-599ae66343aa&static_fare_key=TY%7CP1%7CH1%7CL1_1_23%7CCH1%7CR0%7CTBC1&itinerary_key=QlQsGvbdijFmP90oCGJ2Kw&expected_price_source=share&expected_price_currency=cad&expected_price=2207",
+      "usual_price": 2452,
+      "baseline_basis": "today",
+      "savings_pct": 10,
+      "is_deal": false,
+      "trend": [
+        2697
+      ],
+      "other_dates": [
+        {
+          "departure": "2026-12-20",
+          "return": "2027-01-10",
+          "price": 2697,
+          "link": "https://www.aviasales.com/search/YOW2012NQZ10011?t=TK17977572001797903000001830YOWYULISTNQZ17995740001799620320001372NQZISTYULYOW_5d3bd29de7f1d94dc5469ef810183902_159339&search_date=14102026&expected_price_uuid=01a13a94-4daf-8031-204a-b46476652cfd&static_fare_key=TY%7CP1%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=gk-E3L4kWcksVg_WD7T1UA&expected_price_source=share&expected_price_currency=cad&expected_price=2697"
         }
       ]
     },
@@ -176,7 +252,9 @@
       "baseline_basis": "today",
       "savings_pct": 8,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        594
+      ],
       "other_dates": [
         {
           "departure": "2026-10-22",
@@ -189,36 +267,6 @@
           "return": "2026-10-26",
           "price": 901,
           "link": "https://www.aviasales.com/search/YOW2410PWM26101?t=UA17928216001792836120000242YOWIADPWM17929926001793027220000577PWMIADYOW_305d89581877b2532525cbe026922589_53439&search_date=18102026&expected_price_uuid=01a15100-a1ba-8040-2954-47d66c4f7a0d&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=wfOhfEnw08KggNVoU0M9yw&expected_price_source=share&expected_price_currency=cad&expected_price=901"
-        }
-      ]
-    },
-    {
-      "destination": "TBS",
-      "airport": "TBS",
-      "city": "Tbilisi",
-      "country": "GE",
-      "region": "Other",
-      "price": 1592,
-      "currency": "CAD",
-      "departure": "2027-01-25",
-      "return": "2027-01-31",
-      "nights": 6,
-      "airline": "AC",
-      "stops": 2,
-      "return_stops": 2,
-      "duration_min": 988,
-      "link": "https://www.aviasales.com/search/YOW2501TBS31011?t=QR18008988001801079100002465YOWYULDOHTBS18014070001801507500002215TBSDOHYYZYOW_df38bedbaa7a22258a1ca5ae843e3561_93551&search_date=16102026&expected_price_uuid=01a14636-aa0d-8030-a212-924e48ee21de&static_fare_key=TY%7CP1%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=c1FG_SVNpEQw_xyWbIUfnw&expected_price_source=share&expected_price_currency=cad&expected_price=1592",
-      "usual_price": 1732,
-      "baseline_basis": "today",
-      "savings_pct": 8,
-      "is_deal": false,
-      "trend": [],
-      "other_dates": [
-        {
-          "departure": "2026-12-30",
-          "return": "2027-01-08",
-          "price": 1871,
-          "link": "https://www.aviasales.com/search/YOW3012TBS08011?t=UA17986489201798866600003088YOWORDMUCTBS17993889001799500260002396TBSMUCEWRYOW_21a5d057fbd0b8120fca78a11ebbb0f7_110448&search_date=14102026&expected_price_uuid=01a13ab2-f755-8031-240b-eba440d4ca64&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=NkpiRW5Wojc5x8tDP93Y_A&expected_price_source=share&expected_price_currency=cad&expected_price=1871"
         }
       ]
     },
@@ -242,7 +290,9 @@
       "baseline_basis": "today",
       "savings_pct": 6,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        2217
+      ],
       "other_dates": [
         {
           "departure": "2026-12-24",
@@ -278,7 +328,9 @@
       "baseline_basis": "today",
       "savings_pct": 3,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        1123
+      ],
       "other_dates": [
         {
           "departure": "2027-03-01",
@@ -308,13 +360,53 @@
       "baseline_basis": "today",
       "savings_pct": 3,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        1197
+      ],
       "other_dates": [
         {
           "departure": "2027-02-01",
           "return": "2027-02-07",
           "price": 1277,
           "link": "https://www.aviasales.com/search/YOW0102FRA07021?t=AC18014790001801553100000875YOWYULFRA18019935001802009520000627FRAYULYOW_eecc7f58b28a8ddb2e923bb1f240f9f3_75906&search_date=18102026&expected_price_uuid=01a14e75-f972-8030-6bf8-a4d439374bd5&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=TNS_zT6MGXpbd0hE27sHIA&expected_price_source=share&expected_price_currency=cad&expected_price=1277"
+        }
+      ]
+    },
+    {
+      "destination": "YQB",
+      "airport": "YQB",
+      "city": "Quebec",
+      "country": "CA",
+      "region": "Canada",
+      "price": 973,
+      "currency": "CAD",
+      "departure": "2026-12-25",
+      "return": "2026-12-29",
+      "nights": 4,
+      "airline": "AC",
+      "stops": 1,
+      "return_stops": 1,
+      "duration_min": 124,
+      "link": "https://www.aviasales.com/search/YOW2512YQB29121?t=AC17982282001798238760000176YOWYULYQB17985732001798583520000172YQBYULYOW_964477d4d5bd59d836a4bbc8763e4a6c_57706&search_date=13102026&expected_price_uuid=01a13751-c813-8040-a11a-2403189df9df&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=sL0siZ3ckmXA_ez1y674RQ&expected_price_source=share&expected_price_currency=cad&expected_price=973",
+      "usual_price": 994,
+      "baseline_basis": "today",
+      "savings_pct": 2,
+      "is_deal": false,
+      "trend": [
+        973
+      ],
+      "other_dates": [
+        {
+          "departure": "2026-12-28",
+          "return": "2026-12-31",
+          "price": 994,
+          "link": "https://www.aviasales.com/search/YOW2812YQB31121?t=AC17984874001798497960000176YOWYULYQB17987460001798756320000172YQBYULYOW_f5cb1b0242e7a01c52e64beb504fc066_58951&search_date=13102026&expected_price_uuid=01a13751-ad5e-8040-2021-a44281efd683&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=NMGkFWi9wdlrev8pHBXZFQ&expected_price_source=share&expected_price_currency=cad&expected_price=994"
+        },
+        {
+          "departure": "2026-12-29",
+          "return": "2027-01-02",
+          "price": 1030,
+          "link": "https://www.aviasales.com/search/YOW2912YQB02011?t=AC17985738001798584360000176YOWYULYQB17989188001798931340000209YQBYULYOW_eb719fc0072e9da5b56c40cebd3cf515_61086&search_date=13102026&expected_price_uuid=01a13751-c34c-8040-6ab6-06158c69ee89&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=qshfCidNZ922LTqF_WAb-A&expected_price_source=share&expected_price_currency=cad&expected_price=1030"
         }
       ]
     },
@@ -338,7 +430,9 @@
       "baseline_basis": "today",
       "savings_pct": 1,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        573
+      ],
       "other_dates": [
         {
           "departure": "2026-11-02",
@@ -349,32 +443,40 @@
       ]
     },
     {
-      "destination": "YQB",
-      "airport": "YQB",
-      "city": "Quebec",
-      "country": "CA",
-      "region": "Canada",
-      "price": 973,
+      "destination": "TBS",
+      "airport": "TBS",
+      "city": "Tbilisi",
+      "country": "GE",
+      "region": "Other",
+      "price": 1574,
       "currency": "CAD",
-      "departure": "2026-12-25",
-      "return": "2026-12-29",
-      "nights": 4,
+      "departure": "2027-02-01",
+      "return": "2027-02-07",
+      "nights": 6,
       "airline": "AC",
-      "stops": 1,
-      "return_stops": 1,
-      "duration_min": 124,
-      "link": "https://www.aviasales.com/search/YOW2512YQB29121?t=AC17982282001798238760000176YOWYULYQB17985732001798583520000172YQBYULYOW_964477d4d5bd59d836a4bbc8763e4a6c_57706&search_date=13102026&expected_price_uuid=01a13751-c813-8040-a11a-2403189df9df&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=sL0siZ3ckmXA_ez1y674RQ&expected_price_source=share&expected_price_currency=cad&expected_price=973",
-      "usual_price": 984,
+      "stops": 2,
+      "return_stops": 2,
+      "duration_min": 1028,
+      "link": "https://www.aviasales.com/search/YOW0102TBS07021?t=QR18014904001801683900002685YOWYYZDOHTBS18020118001802116320002282TBSDOHYULYOW_493d8b425b6043709123aa6197b9023d_93594&search_date=18102026&expected_price_uuid=01a14e77-3487-8031-67cc-a488630267c9&static_fare_key=TY%7CP1%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=q7vEIxauL7kYq3HzZ9zL-g&expected_price_source=share&expected_price_currency=cad&expected_price=1574",
+      "usual_price": 1592,
       "baseline_basis": "today",
       "savings_pct": 1,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        1592
+      ],
       "other_dates": [
         {
-          "departure": "2026-12-28",
-          "return": "2026-12-31",
-          "price": 994,
-          "link": "https://www.aviasales.com/search/YOW2812YQB31121?t=AC17984874001798497960000176YOWYULYQB17987460001798756320000172YQBYULYOW_f5cb1b0242e7a01c52e64beb504fc066_58951&search_date=13102026&expected_price_uuid=01a13751-ad5e-8040-2021-a44281efd683&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=NMGkFWi9wdlrev8pHBXZFQ&expected_price_source=share&expected_price_currency=cad&expected_price=994"
+          "departure": "2027-01-25",
+          "return": "2027-01-31",
+          "price": 1592,
+          "link": "https://www.aviasales.com/search/YOW2501TBS31011?t=QR18008988001801079100002465YOWYULDOHTBS18014070001801507500002215TBSDOHYYZYOW_df38bedbaa7a22258a1ca5ae843e3561_93551&search_date=16102026&expected_price_uuid=01a14636-aa0d-8030-a212-924e48ee21de&static_fare_key=TY%7CP1%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=c1FG_SVNpEQw_xyWbIUfnw&expected_price_source=share&expected_price_currency=cad&expected_price=1592"
+        },
+        {
+          "departure": "2026-12-30",
+          "return": "2027-01-08",
+          "price": 1871,
+          "link": "https://www.aviasales.com/search/YOW3012TBS08011?t=UA17986489201798866600003088YOWORDMUCTBS17993889001799500260002396TBSMUCEWRYOW_21a5d057fbd0b8120fca78a11ebbb0f7_110448&search_date=14102026&expected_price_uuid=01a13ab2-f755-8031-240b-eba440d4ca64&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=NkpiRW5Wojc5x8tDP93Y_A&expected_price_source=share&expected_price_currency=cad&expected_price=1871"
         }
       ]
     },
@@ -398,7 +500,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        312
+      ],
       "other_dates": []
     },
     {
@@ -421,7 +525,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        407
+      ],
       "other_dates": []
     },
     {
@@ -444,7 +550,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        427
+      ],
       "other_dates": []
     },
     {
@@ -467,7 +575,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        463
+      ],
       "other_dates": []
     },
     {
@@ -490,7 +600,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        487
+      ],
       "other_dates": []
     },
     {
@@ -513,7 +625,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        556
+      ],
       "other_dates": []
     },
     {
@@ -533,6 +647,31 @@
       "duration_min": 504,
       "link": "https://www.aviasales.com/search/YOW2401BZE14021?t=UA18008085601800887760001380YOWORDIAHBZE18026197201802701080001296BZEIAHORDYOW_ce5b79031549dea811f24476bc0c4ecc_36610&search_date=19102026&expected_price_uuid=01a15367-9ac9-8040-205a-be9c7c34b3fb&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=1vlS9jUzlV2zIsJxjuin2w&expected_price_source=share&expected_price_currency=cad&expected_price=623",
       "usual_price": 623,
+      "baseline_basis": "today",
+      "savings_pct": 0,
+      "is_deal": false,
+      "trend": [
+        623
+      ],
+      "other_dates": []
+    },
+    {
+      "destination": "BOS",
+      "airport": "BOS",
+      "city": "Boston",
+      "country": "US",
+      "region": "USA",
+      "price": 670,
+      "currency": "CAD",
+      "departure": "2026-10-23",
+      "return": "2026-10-26",
+      "nights": 3,
+      "airline": "PD",
+      "stops": 1,
+      "return_stops": 0,
+      "duration_min": 159,
+      "link": "https://www.aviasales.com/search/YOW2310BOS26101?t=PD17927520001792768440000274YOWYTZBOS17930205001793025900000090BOSYOW_9a50b357d5fd9957763687f372c00f86_39594&search_date=15102026&expected_price_uuid=01a141cd-a6dd-8040-ac79-3fa9835bdd1a&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=VMEsjoUSMrpDU6Ih4WX73A&expected_price_source=share&expected_price_currency=cad&expected_price=670",
+      "usual_price": 670,
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
@@ -559,7 +698,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        680
+      ],
       "other_dates": []
     },
     {
@@ -582,7 +723,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        732
+      ],
       "other_dates": []
     },
     {
@@ -605,7 +748,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        772
+      ],
       "other_dates": []
     },
     {
@@ -628,7 +773,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        773
+      ],
       "other_dates": []
     },
     {
@@ -648,6 +795,123 @@
       "duration_min": 625,
       "link": "https://www.aviasales.com/search/YOW0211PMO16111?t=LH17936322001793708400000910YOWEWRPMO17948613001794941100001690PMOFCOYYZYOW_df5a51a952e3189fe69a14bf90412306_51997&search_date=18102026&expected_price_uuid=01a15014-d01a-8040-2f51-b292ed52de00&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=e1XKXDIGX5IzzNl7-Tzqhw&expected_price_source=share&expected_price_currency=cad&expected_price=875",
       "usual_price": 875,
+      "baseline_basis": "today",
+      "savings_pct": 0,
+      "is_deal": false,
+      "trend": [
+        875
+      ],
+      "other_dates": []
+    },
+    {
+      "destination": "PAR",
+      "airport": "CDG",
+      "city": "Paris",
+      "country": "FR",
+      "region": "Europe",
+      "price": 897,
+      "currency": "CAD",
+      "departure": "2027-05-01",
+      "return": "2027-05-09",
+      "nights": 8,
+      "airline": "AC",
+      "stops": 1,
+      "return_stops": 1,
+      "duration_min": 454,
+      "link": "https://www.aviasales.com/search/YOW0105PAR09051?t=AC18091983001809253200000555YOWYULCDG18098718001809895860000761CDGYULYOW_cfb1fa03fa9d8aaf0125bbce78869715_53360&search_date=18102026&expected_price_uuid=01a1500d-5216-8040-a568-256fb16564ff&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=8MscnYQu9qh16XSCbWr45A&expected_price_source=share&expected_price_currency=cad&expected_price=897",
+      "usual_price": 897,
+      "baseline_basis": "today",
+      "savings_pct": 0,
+      "is_deal": false,
+      "trend": [],
+      "other_dates": []
+    },
+    {
+      "destination": "MAD",
+      "airport": "MAD",
+      "city": "Madrid",
+      "country": "ES",
+      "region": "Europe",
+      "price": 954,
+      "currency": "CAD",
+      "departure": "2026-11-02",
+      "return": "2026-11-16",
+      "nights": 14,
+      "airline": "AC",
+      "stops": 2,
+      "return_stops": 2,
+      "duration_min": 611,
+      "link": "https://www.aviasales.com/search/YOW0211MAD16111?t=AC17936133001793691900000950YOWYTZIADMAD17948091001794869400001365MADFRAYYZYOW_2f8fbde7411a1915a592ec12a98eacbb_56709&search_date=18102026&expected_price_uuid=01a14ff6-a758-8040-6f44-2c2c29ebc58d&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=N5_vGY5mRxNzy-3JsBFm7g&expected_price_source=share&expected_price_currency=cad&expected_price=954",
+      "usual_price": 954,
+      "baseline_basis": "today",
+      "savings_pct": 0,
+      "is_deal": false,
+      "trend": [],
+      "other_dates": []
+    },
+    {
+      "destination": "REK",
+      "airport": "KEF",
+      "city": "Reykjavik",
+      "country": "IS",
+      "region": "Europe",
+      "price": 967,
+      "currency": "CAD",
+      "departure": "2027-04-26",
+      "return": "2027-05-01",
+      "nights": 5,
+      "airline": "PD",
+      "stops": 1,
+      "return_stops": 1,
+      "duration_min": 420,
+      "link": "https://www.aviasales.com/search/YOW2604REK01051?t=FI18087612001808806800000520YOWYYZKEF18092016001809279300001535KEFYYZYOW_a8f426b6b9db01889f3a1bea1e51b8b3_56454&search_date=17102026&expected_price_uuid=01a14c35-c439-8040-2b55-22d4ae67fd2f&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Y5eileNd6Q-IXBNoWHCwOA&expected_price_source=share&expected_price_currency=cad&expected_price=967",
+      "usual_price": 967,
+      "baseline_basis": "today",
+      "savings_pct": 0,
+      "is_deal": false,
+      "trend": [],
+      "other_dates": []
+    },
+    {
+      "destination": "TLV",
+      "airport": "TLV",
+      "city": "Tel Aviv Yafo",
+      "country": "IL",
+      "region": "Africa & Middle East",
+      "price": 1104,
+      "currency": "CAD",
+      "departure": "2027-04-15",
+      "return": "2027-04-22",
+      "nights": 7,
+      "airline": "UA",
+      "stops": 2,
+      "return_stops": 1,
+      "duration_min": 803,
+      "link": "https://www.aviasales.com/search/YOW1504TLV22041?t=AC18078004801807889100001057YOWEWRFRATLV18083955001808437860001126TLVYYZYOW_2cddb3a6e4fefb18368995afbf99f661_64466&search_date=18102026&expected_price_uuid=01a14c69-a964-8040-acfe-cffe83f3b77c&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=h49_-clUkGtOKCH7Q0lJTw&expected_price_source=share&expected_price_currency=cad&expected_price=1104",
+      "usual_price": 1104,
+      "baseline_basis": "today",
+      "savings_pct": 0,
+      "is_deal": false,
+      "trend": [],
+      "other_dates": []
+    },
+    {
+      "destination": "SVQ",
+      "airport": "SVQ",
+      "city": "Sevilla",
+      "country": "ES",
+      "region": "Europe",
+      "price": 1113,
+      "currency": "CAD",
+      "departure": "2026-11-02",
+      "return": "2026-11-16",
+      "nights": 14,
+      "airline": "UA",
+      "stops": 2,
+      "return_stops": 2,
+      "duration_min": 744,
+      "link": "https://www.aviasales.com/search/YOW0211SVQ16111?t=AC17936154001793709000001200YOWDCAIADFRASVQ17948601001794941100001710SVQZRHYYZYOW_f49a3f0547e879b3973a1302159a083a_66144&search_date=18102026&expected_price_uuid=01a14fc9-2fe3-8040-67ad-20f05d607bb4&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=RL84QQASz3YjCbnqdxDe1w&expected_price_source=share&expected_price_currency=cad&expected_price=1112",
+      "usual_price": 1113,
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
@@ -674,8 +938,17 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
-      "other_dates": []
+      "trend": [
+        1144
+      ],
+      "other_dates": [
+        {
+          "departure": "2026-12-27",
+          "return": "2026-12-30",
+          "price": 1144,
+          "link": "https://www.aviasales.com/search/YOW2712YQM30121?t=PD17983821001798391820000102YOWYQM17986392001798643400000130YQMYOW_507612809489cb289a2496f57c809e3f_67847&search_date=13102026&expected_price_uuid=01a13754-1415-8040-2e04-119cdb4ca7c3&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=JFh_1TqBVXBSJ9IpjXM8uQ&expected_price_source=share&expected_price_currency=cad&expected_price=1144"
+        }
+      ]
     },
     {
       "destination": "CMN",
@@ -694,6 +967,54 @@
       "duration_min": 574,
       "link": "https://www.aviasales.com/search/YOW1402CMN28021?t=AC18026136001802684100000875YOWYTZYULCMN18037782001803864900001745CMNFRAYYZYOW_b10195690bdd362180ba49e0381fa03b_69016&search_date=16102026&expected_price_uuid=01a14571-ea89-8040-6cdb-9eb5c3ce050e&static_fare_key=TY%7CP0%7CH1%7CL1_2_0%7CCH0%7CR0%7CTBC1&itinerary_key=9iWCExLgQ2gK8tZeVNw1rA&expected_price_source=share&expected_price_currency=cad&expected_price=1169",
       "usual_price": 1169,
+      "baseline_basis": "today",
+      "savings_pct": 0,
+      "is_deal": false,
+      "trend": [
+        1169
+      ],
+      "other_dates": []
+    },
+    {
+      "destination": "OPO",
+      "airport": "OPO",
+      "city": "Porto",
+      "country": "PT",
+      "region": "Europe",
+      "price": 1272,
+      "currency": "CAD",
+      "departure": "2026-11-02",
+      "return": "2026-11-16",
+      "nights": 14,
+      "airline": "AC",
+      "stops": 2,
+      "return_stops": 2,
+      "duration_min": 741,
+      "link": "https://www.aviasales.com/search/YOW0211OPO16111?t=AC17936358001793710200000940YOWYYZMUCOPO17948088001794873300001375OPOFRAYYZYOW_e778d2e4507d95df13c3a44dadde56df_75606&search_date=18102026&expected_price_uuid=01a15066-1443-8040-2033-8bdb0c8c704c&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=mjBz4vjycjO7PdhTcdbaTQ&expected_price_source=share&expected_price_currency=cad&expected_price=1272",
+      "usual_price": 1272,
+      "baseline_basis": "today",
+      "savings_pct": 0,
+      "is_deal": false,
+      "trend": [],
+      "other_dates": []
+    },
+    {
+      "destination": "IST",
+      "airport": "IST",
+      "city": "Istanbul",
+      "country": "TR",
+      "region": "Africa & Middle East",
+      "price": 1374,
+      "currency": "CAD",
+      "departure": "2027-02-01",
+      "return": "2027-02-07",
+      "nights": 6,
+      "airline": "AC",
+      "stops": 2,
+      "return_stops": 2,
+      "duration_min": 713,
+      "link": "https://www.aviasales.com/search/YOW0102IST07021?t=AC18014937001801591800001155YOWYULFRAIST18019818001802015820001047ISTFRAYULYOW_553d07e7399ecfa79ed4ba962f743d98_81686&search_date=18102026&expected_price_uuid=01a14e75-06aa-8030-e295-6b1143fc15d4&static_fare_key=TY%7CP1%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=XF1e3-dFZObUeYNiRSFQgQ&expected_price_source=share&expected_price_currency=cad&expected_price=1374",
+      "usual_price": 1374,
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
@@ -720,6 +1041,54 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
+      "trend": [
+        1406
+      ],
+      "other_dates": []
+    },
+    {
+      "destination": "TLL",
+      "airport": "TLL",
+      "city": "Tallinn",
+      "country": "EE",
+      "region": "Europe",
+      "price": 1511,
+      "currency": "CAD",
+      "departure": "2027-07-01",
+      "return": "2027-07-22",
+      "nights": 21,
+      "airline": "WS",
+      "stops": 2,
+      "return_stops": 2,
+      "duration_min": 635,
+      "link": "https://www.aviasales.com/search/YOW0107TLL22071?t=SK18144249001814578200002135YOWYYZCPHTLL18162369001816302000001505TLLCPHYYZYOW_4f2aeb866cedcc49bb9f00a424138b47_88766&search_date=14102026&expected_price_uuid=01a13c38-45f7-8040-6cb2-85f2873d52d7&static_fare_key=TY%7CP1%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=y-xEA5C5k7oZo1TumbXqrQ&expected_price_source=share&expected_price_currency=cad&expected_price=1511",
+      "usual_price": 1511,
+      "baseline_basis": "today",
+      "savings_pct": 0,
+      "is_deal": false,
+      "trend": [],
+      "other_dates": []
+    },
+    {
+      "destination": "AMS",
+      "airport": "AMS",
+      "city": "Amsterdam",
+      "country": "NL",
+      "region": "Europe",
+      "price": 1599,
+      "currency": "CAD",
+      "departure": "2027-07-01",
+      "return": "2027-07-22",
+      "nights": 21,
+      "airline": "WS",
+      "stops": 2,
+      "return_stops": 2,
+      "duration_min": 565,
+      "link": "https://www.aviasales.com/search/YOW0107AMS22071?t=WS18144249001814526000001325YOWYYZYHZAMS18162897001816364100001600AMSDUBYYZYOW_1fe041aed39c6a1273dc38d4f995ae91_93913&search_date=14102026&expected_price_uuid=01a13c37-7e7d-8040-2e40-5d2bb6f87853&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=NZL1JMZ4jmRfmBMi55Tjug&expected_price_source=share&expected_price_currency=cad&expected_price=1599",
+      "usual_price": 1599,
+      "baseline_basis": "today",
+      "savings_pct": 0,
+      "is_deal": false,
       "trend": [],
       "other_dates": []
     },
@@ -743,7 +1112,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        1671
+      ],
       "other_dates": []
     },
     {
@@ -763,6 +1134,31 @@
       "duration_min": 775,
       "link": "https://www.aviasales.com/search/YOW3110AYT14111?t=TK17934249001793568900001980YOWYYZISTAYT17946975001794786000001955AYTISTYYZYOW_e59bb4c22d8a5599e8e5ec34527be634_97736&search_date=17102026&expected_price_uuid=01a1495e-6287-8040-6f51-4b81c5da4e66&static_fare_key=TY%7CP1%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=07pBETz4bfw34fbNYDxyxA&expected_price_source=share&expected_price_currency=cad&expected_price=1675",
       "usual_price": 1675,
+      "baseline_basis": "today",
+      "savings_pct": 0,
+      "is_deal": false,
+      "trend": [
+        1675
+      ],
+      "other_dates": []
+    },
+    {
+      "destination": "EVN",
+      "airport": "EVN",
+      "city": "Yerevan",
+      "country": "AM",
+      "region": "Other",
+      "price": 1722,
+      "currency": "CAD",
+      "departure": "2027-02-01",
+      "return": "2027-02-07",
+      "nights": 6,
+      "airline": "AC",
+      "stops": 2,
+      "return_stops": 2,
+      "duration_min": 808,
+      "link": "https://www.aviasales.com/search/YOW0102EVN07021?t=LO18014730001801627500002035YOWYYZWAWEVN18019770001802047200001710EVNWAWYYZYOW_5994b25f4b14e3cf00d5a976213d5d3f_102368&search_date=18102026&expected_price_uuid=01a14e76-ea31-8030-e62f-92118128218f&static_fare_key=TY%7CP1%7CH0%7CL1_1_0%7CCH0%7CR0%7CTBC1&itinerary_key=c0DclUWhPSe7q4E_4KveUQ&expected_price_source=share&expected_price_currency=cad&expected_price=1722",
+      "usual_price": 1722,
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
@@ -789,6 +1185,31 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
+      "trend": [
+        1752
+      ],
+      "other_dates": []
+    },
+    {
+      "destination": "TPE",
+      "airport": "TPE",
+      "city": "Taipei",
+      "country": "TW",
+      "region": "Asia & Pacific",
+      "price": 1791,
+      "currency": "CAD",
+      "departure": "2027-04-15",
+      "return": "2027-04-22",
+      "nights": 7,
+      "airline": "AC",
+      "stops": 1,
+      "return_stops": 2,
+      "duration_min": 1084,
+      "link": "https://www.aviasales.com/search/YOW1504TPE22041?t=BR18077751001807940400002035YOWYVRTPE18083805001808437860001676TPENRTHNDYYZYOW_b100dfbab8925e9beb1a9fa8a024cc9d_106917&search_date=19102026&expected_price_uuid=01a151e6-bcd4-8040-626e-ecc5a4b2e6c6&static_fare_key=TY%7CP0%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=uLWvr3wTpDujK-h8QUOSRA&expected_price_source=share&expected_price_currency=cad&expected_price=1791",
+      "usual_price": 1791,
+      "baseline_basis": "today",
+      "savings_pct": 0,
+      "is_deal": false,
       "trend": [],
       "other_dates": []
     },
@@ -812,7 +1233,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        1981
+      ],
       "other_dates": []
     },
     {
@@ -835,7 +1258,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        2072
+      ],
       "other_dates": []
     },
     {
@@ -858,7 +1283,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        2092
+      ],
       "other_dates": []
     },
     {
@@ -881,7 +1308,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        2098
+      ],
       "other_dates": []
     },
     {
@@ -904,26 +1333,28 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        2135
+      ],
       "other_dates": []
     },
     {
-      "destination": "NQZ",
-      "airport": "NQZ",
-      "city": "Astana",
-      "country": "KZ",
-      "region": "Other",
-      "price": 2697,
+      "destination": "SHJ",
+      "airport": "SHJ",
+      "city": "Sharjah",
+      "country": "AE",
+      "region": "Africa & Middle East",
+      "price": 2719,
       "currency": "CAD",
-      "departure": "2026-12-20",
-      "return": "2027-01-10",
-      "nights": 21,
-      "airline": "AC",
+      "departure": "2026-12-24",
+      "return": "2027-01-05",
+      "nights": 12,
+      "airline": "PD",
       "stops": 2,
       "return_stops": 2,
-      "duration_min": 943,
-      "link": "https://www.aviasales.com/search/YOW2012NQZ10011?t=TK17977572001797903000001830YOWYULISTNQZ17995740001799620320001372NQZISTYULYOW_5d3bd29de7f1d94dc5469ef810183902_159339&search_date=14102026&expected_price_uuid=01a13a94-4daf-8031-204a-b46476652cfd&static_fare_key=TY%7CP1%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=gk-E3L4kWcksVg_WD7T1UA&expected_price_source=share&expected_price_currency=cad&expected_price=2697",
-      "usual_price": 2697,
+      "duration_min": null,
+      "link": "https://www.aviasales.com/search/YOW2412SHJ05011",
+      "usual_price": 2719,
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
@@ -950,7 +1381,9 @@
       "baseline_basis": "today",
       "savings_pct": 0,
       "is_deal": false,
-      "trend": [],
+      "trend": [
+        2844
+      ],
       "other_dates": []
     }
   ]
