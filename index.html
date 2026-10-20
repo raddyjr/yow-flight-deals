@@ -4,248 +4,86 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>YOW Flight Deals</title>
-<meta name="description" content="The cheapest round-trip flights out of Ottawa (YOW), refreshed every day.">
+<meta name="description" content="Hand-picked cheap flights out of Ottawa (YOW).">
 <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1" data-cmp-ab="2">(function(){var script=document.createElement("script");script.async=1;script.setAttribute("data-cmp-ab","2");script.src='https://emrldtp.com/NTg3ODg2.js?t=587886';document.head.appendChild(script);})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #f6f7f9;
-    --surface: #ffffff;
-    --surface-2: #f0f2f5;
-    --text: #12161c;
-    --muted: #5d6673;
-    --border: #e2e6eb;
-    --accent: #c8102e;        /* Ottawa red */
-    --accent-soft: #fde8eb;
-    --good: #0f7b4a;
-    --good-soft: #e3f5ec;
-    --shadow: 0 1px 2px rgba(16,24,40,.05), 0 4px 16px rgba(16,24,40,.06);
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #0e1116; --surface: #161b22; --surface-2: #1d232c; --text: #e8ecf1;
-      --muted: #97a1ad; --border: #2a313b; --accent: #ff5a6e; --accent-soft: #3a1820;
-      --good: #4cd38f; --good-soft: #12301f; --shadow: none;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #0e1116; --surface: #161b22; --surface-2: #1d232c; --text: #e8ecf1;
-    --muted: #97a1ad; --border: #2a313b; --accent: #ff5a6e; --accent-soft: #3a1820;
-    --good: #4cd38f; --good-soft: #12301f; --shadow: none;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; background: var(--bg); color: var(--text);
-    font: 15px/1.5 Inter, system-ui, -apple-system, Segoe UI, sans-serif;
-  }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
-  header { padding: 40px 0 24px; }
-  .eyebrow { color: var(--accent); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 12px; }
-  h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.1; margin: 6px 0 10px; letter-spacing: -.02em; }
-  .sub { color: var(--muted); margin: 0; }
-  .banner {
-    margin: 16px 0 0; padding: 10px 14px; border-radius: 10px;
-    background: var(--accent-soft); color: var(--text); font-size: 14px;
-  }
-  .stats { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
-  .stat { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px 16px; min-width: 130px; }
-  .stat b { display: block; font-size: 22px; }
-  .stat span { color: var(--muted); font-size: 13px; }
-
-  .controls {
-    position: sticky; top: 0; z-index: 5; background: var(--bg);
-    padding: 12px 0; border-bottom: 1px solid var(--border);
-    display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
-  }
-  .chips { display: flex; gap: 6px; flex-wrap: wrap; }
-  .chip {
-    border: 1px solid var(--border); background: var(--surface); color: var(--text);
-    padding: 6px 12px; border-radius: 999px; font: inherit; font-size: 13px; cursor: pointer;
-  }
-  .chip[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
-  select, input[type=search], input[type=number] {
-    font: inherit; font-size: 14px; color: var(--text); background: var(--surface);
-    border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px;
-  }
-  input[type=search] { flex: 1 1 180px; min-width: 0; }
-  input[type=number] { width: 110px; }
-  label.check { display: flex; gap: 6px; align-items: center; font-size: 14px; color: var(--muted); }
-
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; padding: 20px 0 48px; }
-  .card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
-    padding: 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 10px;
-  }
-  .card.deal { border-color: var(--good); }
-  .top { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
-  .city { font-weight: 700; font-size: 18px; line-height: 1.2; }
-  .where { color: var(--muted); font-size: 13px; }
-  .price { text-align: right; white-space: nowrap; }
-  .price b { font-size: 24px; font-weight: 800; }
-  .price small { display: block; color: var(--muted); font-size: 12px; }
-  .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--good-soft); color: var(--good); }
-  .meta { display: flex; flex-wrap: wrap; gap: 6px 14px; color: var(--muted); font-size: 13px; }
-  .meta strong { color: var(--text); font-weight: 600; }
-  .row { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: auto; }
-  .spark { height: 28px; width: 110px; }
-  .btn {
-    background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; font-size: 14px;
-    padding: 8px 14px; border-radius: 8px; white-space: nowrap;
-  }
-  details { font-size: 13px; color: var(--muted); }
-  details a { color: var(--text); }
-  details ul { margin: 6px 0 0; padding-left: 18px; }
-  .empty { padding: 60px 0; text-align: center; color: var(--muted); }
-  footer { color: var(--muted); font-size: 13px; padding: 0 0 40px; }
-  footer a { color: inherit; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="./">YOW <span>Flight Deals</span></a>
+</div></div>
+
 <div class="wrap">
-  <header>
+  <header class="hero">
     <div class="eyebrow">Ottawa · YOW</div>
-    <h1>Today's best flight deals from Ottawa</h1>
-    <p class="sub" id="updated">Loading fares...</p>
-    <div class="banner" id="demo" hidden>
-      You're looking at <b>sample data</b>. Add your Travelpayouts token (see README) and the daily job will replace it with real fares.
-    </div>
-    <div class="stats" id="stats"></div>
+    <h1>Hand-picked flight deals from Ottawa</h1>
+    <p class="sub">Cheap flights out of YOW, found and checked by a real person. Book quickly, because good fares don't last.</p>
   </header>
 
-  <div class="controls">
-    <div class="chips" id="regions"></div>
-    <input type="search" id="q" placeholder="Search city or country" aria-label="Search">
-    <select id="month" aria-label="Departure month"><option value="">Any month</option></select>
-    <input type="number" id="max" placeholder="Max $" min="0" step="50" aria-label="Max price">
-    <select id="sort" aria-label="Sort">
-      <option value="deal">Best deals first</option>
-      <option value="price">Cheapest first</option>
-      <option value="date">Soonest first</option>
-    </select>
-    <label class="check"><input type="checkbox" id="direct"> Nonstop only</label>
-    <label class="check"><input type="checkbox" id="onlyDeals"> Deals only</label>
-  </div>
-
-  <main class="grid" id="grid"></main>
-
-  <footer>
-    Prices are round-trip per person, found in the last 48 hours of searches, and can change before you book.
-    A "deal" is a fare at least <span id="thr">20</span>% below the usual price we've tracked for that destination.
-    Fare data from <a href="https://www.travelpayouts.com" rel="noopener">Travelpayouts / Aviasales</a>.
-  </footer>
+  <div class="filters" id="filters"></div>
+  <main class="grid" id="grid"><div class="empty">Loading deals...</div></main>
 </div>
 
+<footer><div class="wrap">
+  Prices were correct when posted and can change at any time. Always check the final price before you book.
+</div></footer>
+
+<script src="site.js"></script>
 <script>
-const state = { region: "All", q: "", month: "", max: null, sort: "deal", direct: false, onlyDeals: false };
-let data = null;
+let posts = [];
+let region = "all";
 
-const $ = (id) => document.getElementById(id);
-const fmtMoney = (n, cur) => new Intl.NumberFormat("en-CA", { style: "currency", currency: cur || "CAD", maximumFractionDigits: 0 }).format(n);
-const fmtDate = (s) => new Date(s + "T12:00:00").toLocaleDateString("en-CA", { month: "short", day: "numeric" });
-const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-let countryName;
-try { countryName = new Intl.DisplayNames(["en"], { type: "region" }); } catch { countryName = null; }
-const country = (cc) => { try { return (countryName && cc) ? countryName.of(cc) : cc; } catch { return cc; } };
-
-function spark(values) {
-  if (!values || values.length < 2) return "";
-  const w = 110, h = 28, min = Math.min(...values), max = Math.max(...values), span = max - min || 1;
-  const pts = values.map((v, i) => `${(i / (values.length - 1)) * w},${h - 3 - ((v - min) / span) * (h - 6)}`).join(" ");
-  return `<svg class="spark" viewBox="0 0 ${w} ${h}" aria-label="Price trend"><polyline fill="none" stroke="currentColor" stroke-width="1.5" points="${pts}" opacity=".6"/></svg>`;
-}
-
-const AIRLINES = { AC: "Air Canada", WS: "WestJet", PD: "Porter", TS: "Air Transat", F8: "Flair", Y9: "Lynx",
-  AA: "American", UA: "United", DL: "Delta", B6: "JetBlue", WN: "Southwest", NK: "Spirit", F9: "Frontier", AS: "Alaska",
-  BA: "British Airways", AF: "Air France", KL: "KLM", LH: "Lufthansa", LX: "Swiss", TP: "TAP Portugal", IB: "Iberia",
-  EI: "Aer Lingus", FI: "Icelandair", TK: "Turkish", EK: "Emirates", QR: "Qatar", AM: "Aeromexico", CM: "Copa",
-  AV: "Avianca", NH: "ANA", JL: "JAL", KE: "Korean Air", CX: "Cathay Pacific", VS: "Virgin Atlantic", AZ: "ITA", SK: "SAS" };
-const airline = (c) => AIRLINES[c] || c;
-
-function stopsText(n) { return n === 0 ? "Nonstop" : n === 1 ? "1 stop" : `${n} stops`; }
-
-function card(d) {
-  const others = (d.other_dates || []).map(o =>
-    `<li><a href="${esc(o.link)}" target="_blank" rel="noopener">${fmtDate(o.departure)} – ${fmtDate(o.return)}</a> · ${fmtMoney(o.price, d.currency)}</li>`).join("");
-  return `<article class="card ${d.is_deal ? "deal" : ""}">
-    <div class="top">
-      <div>
-        <div class="city">${esc(d.city)}</div>
-        <div class="where">${esc(country(d.country))} · ${esc(d.airport)}</div>
+function card(p) {
+  const r = regionOf(p.region);
+  const expired = isExpired(p);
+  const pct = savingsPct(p);
+  const img = p.image
+    ? `<div class="img" style="background-image:url('${esc(safeUrl(p.image).replace(/'/g, "%27"))}')"></div>`
+    : `<div class="img"><div class="ph">${r.icon}</div></div>`;
+  return `<a class="post-card ${expired ? "is-expired" : ""}" href="post.html?id=${encodeURIComponent(p.id)}">
+    ${img}
+    <div class="body">
+      <div class="meta"><span>${r.icon} ${esc(r.name)}</span><span>${fmtDate(p.published_at, { month: "short", day: "numeric" })}</span></div>
+      <h2>${esc(p.title)}</h2>
+      <div class="meta">${p.travel_dates ? `<span>${esc(p.travel_dates)}</span>` : ""}${p.airline ? `<span>${esc(p.airline)}</span>` : ""}</div>
+      <div class="price-row">
+        <span class="price">${fmtMoney(p.price, p.currency)}</span>
+        ${p.usual_price ? `<span class="was">${fmtMoney(p.usual_price, p.currency)}</span>` : ""}
+        ${expired ? `<span class="badge expired">Expired</span>` : pct >= 5 ? `<span class="badge">${pct}% off</span>` : ""}
       </div>
-      <div class="price"><b>${fmtMoney(d.price, d.currency)}</b>
-        <small>${d.savings_pct > 0 ? `usually ${fmtMoney(d.usual_price, d.currency)}` : "round trip"}</small></div>
     </div>
-    ${d.is_deal ? `<div><span class="badge">${d.savings_pct}% below usual</span></div>` : ""}
-    <div class="meta">
-      <span><strong>${fmtDate(d.departure)} – ${fmtDate(d.return)}</strong></span>
-      <span>${d.nights} nights</span>
-      <span>${stopsText(d.stops)}</span>
-      ${d.airline ? `<span>${esc(airline(d.airline))}</span>` : ""}
-    </div>
-    ${others ? `<details><summary>More dates</summary><ul>${others}</ul></details>` : ""}
-    <div class="row">${spark(d.trend) || "<span></span>"}<a class="btn" href="${esc(d.link)}" target="_blank" rel="noopener">See flight</a></div>
-  </article>`;
+  </a>`;
 }
 
 function render() {
-  const q = state.q.trim().toLowerCase();
-  let list = data.deals.filter(d =>
-    (state.region === "All" || d.region === state.region) &&
-    (!q || `${d.city} ${country(d.country)} ${d.airport}`.toLowerCase().includes(q)) &&
-    (!state.month || d.departure.startsWith(state.month)) &&
-    (!state.max || d.price <= state.max) &&
-    (!state.direct || (d.stops === 0 && d.return_stops === 0)) &&
-    (!state.onlyDeals || d.is_deal));
-  const sorters = {
-    deal: (a, b) => (b.is_deal - a.is_deal) || (b.savings_pct - a.savings_pct) || (a.price - b.price),
-    price: (a, b) => a.price - b.price,
-    date: (a, b) => a.departure.localeCompare(b.departure),
-  };
-  list.sort(sorters[state.sort]);
-  $("grid").innerHTML = list.length ? list.map(card).join("") : `<div class="empty">No flights match those filters.</div>`;
+  const list = posts
+    .filter((p) => region === "all" || p.region === region)
+    // Live deals first, expired ones after, newest first within each.
+    .sort((a, b) => isExpired(a) - isExpired(b));
+  document.getElementById("grid").innerHTML = list.length
+    ? list.map(card).join("")
+    : `<div class="empty">No deals here yet. Check back soon!</div>`;
 }
 
-function setup() {
-  const when = new Date(data.generated_at);
-  $("updated").textContent = `Updated ${when.toLocaleString("en-CA", { dateStyle: "medium", timeStyle: "short" })} · ${data.deals.length} destinations · ${(data.fares_scanned || 0).toLocaleString()} fares scanned`;
-  $("demo").hidden = !data.demo;
-  $("thr").textContent = data.deal_threshold_pct ?? 20;
-
-  const deals = data.deals.filter(d => d.is_deal);
-  const cheapest = [...data.deals].sort((a, b) => a.price - b.price)[0];
-  const biggest = [...deals].sort((a, b) => b.savings_pct - a.savings_pct)[0];
-  $("stats").innerHTML = [
-    `<div class="stat"><b>${deals.length}</b><span>deals today</span></div>`,
-    cheapest ? `<div class="stat"><b>${fmtMoney(cheapest.price, cheapest.currency)}</b><span>cheapest: ${esc(cheapest.city)}</span></div>` : "",
-    biggest ? `<div class="stat"><b>${biggest.savings_pct}% off</b><span>biggest drop: ${esc(biggest.city)}</span></div>` : "",
-  ].join("");
-
-  const regions = ["All", ...new Set(data.deals.map(d => d.region))];
-  $("regions").innerHTML = regions.map(r => `<button class="chip" aria-pressed="${r === state.region}" data-r="${esc(r)}">${esc(r)}</button>`).join("");
-  $("regions").onclick = (e) => {
+function setupFilters() {
+  const used = new Set(posts.map((p) => p.region));
+  const chips = [{ id: "all", name: "All deals", icon: "" }, ...REGIONS.filter((r) => used.has(r.id))];
+  const el = document.getElementById("filters");
+  el.innerHTML = chips.map((c) =>
+    `<button class="chip" data-r="${c.id}" aria-pressed="${c.id === region}">${c.icon} ${esc(c.name)}</button>`).join("");
+  el.onclick = (e) => {
     const b = e.target.closest("[data-r]"); if (!b) return;
-    state.region = b.dataset.r;
-    $("regions").querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.r === state.region));
+    region = b.dataset.r;
+    el.querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", c.dataset.r === region));
     render();
   };
-
-  const months = [...new Set(data.deals.map(d => d.departure.slice(0, 7)))].sort();
-  $("month").innerHTML += months.map(m => `<option value="${m}">${new Date(m + "-15").toLocaleDateString("en-CA", { month: "long", year: "numeric" })}</option>`).join("");
-
-  $("q").oninput = (e) => { state.q = e.target.value; render(); };
-  $("month").onchange = (e) => { state.month = e.target.value; render(); };
-  $("max").oninput = (e) => { state.max = Number(e.target.value) || null; render(); };
-  $("sort").onchange = (e) => { state.sort = e.target.value; render(); };
-  $("direct").onchange = (e) => { state.direct = e.target.checked; render(); };
-  $("onlyDeals").onchange = (e) => { state.onlyDeals = e.target.checked; render(); };
-  render();
 }
 
-fetch("data/deals.json", { cache: "no-store" })
-  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-  .then(j => { data = j; setup(); })
-  .catch(() => { $("updated").textContent = "Couldn't load today's fares. The daily job may not have run yet."; });
+loadPosts()
+  .then((p) => { posts = p.filter((x) => !x.draft); setupFilters(); render(); })
+  .catch(() => { document.getElementById("grid").innerHTML = `<div class="empty">Couldn't load deals right now.</div>`; });
 </script>
 </body>
 </html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deal · YOW Flight Deals</title>
+<script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1" data-cmp-ab="2">(function(){var script=document.createElement("script");script.async=1;script.setAttribute("data-cmp-ab","2");script.src='https://emrldtp.com/NTg3ODg2.js?t=587886';document.head.appendChild(script);})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="./">YOW <span>Flight Deals</span></a>
+</div></div>
+
+<main class="wrap narrow post" id="post"><p class="note">Loading...</p></main>
+
+<footer><div class="wrap narrow">
+  Prices were correct when posted and can change at any time. Always check the final price before you book.
+</div></footer>
+
+<script src="site.js"></script>
+<script>
+const id = new URLSearchParams(location.search).get("id");
+const el = document.getElementById("post");
+
+function show(p) {
+  const r = regionOf(p.region);
+  const expired = isExpired(p);
+  const pct = savingsPct(p);
+  document.title = `${p.title} · YOW Flight Deals`;
+  const facts = [
+    ["Price", `${fmtMoney(p.price, p.currency)}${p.trip_type ? ` ${esc(p.trip_type)}` : ""}`],
+    p.usual_price && ["Usually", fmtMoney(p.usual_price, p.currency) + (pct ? ` (${pct}% off)` : "")],
+    p.travel_dates && ["When", esc(p.travel_dates)],
+    p.airline && ["Airline", esc(p.airline)],
+    p.stops && ["Stops", esc(p.stops)],
+    p.expires && ["Book by", fmtDate(p.expires)],
+  ].filter(Boolean);
+  el.innerHTML = `
+    <a class="back" href="./">← All deals</a>
+    <div class="meta" style="margin-top:18px"><span>${r.icon} ${esc(r.name)}</span><span>Posted ${fmtDate(p.published_at)}</span></div>
+    <h1>${esc(p.title)}</h1>
+    ${expired ? `<p><span class="badge expired">This deal has expired</span></p>` : ""}
+    ${p.image ? `<img class="cover" src="${esc(safeUrl(p.image))}" alt="">` : ""}
+    <div class="facts">${facts.map(([k, v]) => `<div><b>${k}</b>${v}</div>`).join("")}</div>
+    <div class="content">${renderMarkdown(p.body)}</div>
+    ${p.link && !expired ? `<p style="margin-top:24px"><a class="btn" href="${esc(safeUrl(p.link))}" target="_blank" rel="noopener">Book this deal →</a></p>` : ""}
+  `;
+}
+
+loadPosts()
+  .then((posts) => {
+    const p = posts.find((x) => x.id === id && !x.draft);
+    if (p) show(p);
+    else el.innerHTML = `<a class="back" href="./">← All deals</a><h1>Deal not found</h1><p class="note">It may have been removed.</p>`;
+  })
+  .catch(() => { el.innerHTML = `<p class="note">Couldn't load this deal right now.</p>`; });
+</script>
+</body>
+</html>
