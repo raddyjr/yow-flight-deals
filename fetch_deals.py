@@ -137,29 +137,150 @@ def months_to_search():
     return out
 
 
+# Places people commonly fly to from Ottawa (Aviasales city codes). Each gets
+# its own search, which returns far more dates than the "anywhere" searches.
+POPULAR = [
+    # Canada
+    "YVR", "YYC", "YEA", "YWG", "YHZ", "YYJ", "YQB", "YYT", "YXE", "YQR", "YLW", "YTO", "YMQ",
+    # USA
+    "NYC", "BOS", "WAS", "CHI", "ORL", "FLL", "MIA", "TPA", "LAS", "LAX", "SFO", "SEA",
+    "DEN", "PHX", "SAN", "MSY", "ATL", "DFW", "HNL", "NAS",
+    # Mexico & Caribbean
+    "CUN", "PUJ", "SJD", "PVR", "CZM", "HAV", "VRA", "MBJ", "SJU", "AUA", "SXM", "STI",
+    # Central & South America
+    "SJO", "LIR", "PTY", "BOG", "LIM", "MDE",
+    # Europe
+    "LON", "PAR", "LIS", "OPO", "MAD", "BCN", "ROM", "MIL", "AMS", "DUB", "REK",
+    "FRA", "MUC", "BER", "ATH", "IST", "VIE", "PRG", "BUD", "CPH", "ZRH", "EDI",
+    # Africa, Middle East, Asia, Pacific
+    "CMN", "CAI", "DXB", "TLV", "TYO", "SEL", "HKG", "BKK", "SIN", "DEL", "MNL", "SYD",
+]
+
+
+def _fare(dest, price, dep, ret, airline="", stops=0, ret_stops=None,
+          link="", airport="", duration=None):
+    return {
+        "destination": dest, "destination_airport": airport or dest, "price": price,
+        "departure_at": dep, "return_at": ret, "airline": airline or "",
+        "transfers": stops or 0,
+        "return_transfers": (stops or 0) if ret_stops is None else ret_stops,
+        "link": link, "duration_to": duration,
+    }
+
+
+def _from_v3(f):
+    return _fare(f.get("destination"), f.get("price"), f.get("departure_at"),
+                 f.get("return_at"), f.get("airline"), f.get("transfers"),
+                 f.get("return_transfers"), f.get("link"), f.get("destination_airport"),
+                 f.get("duration_to") or f.get("duration"))
+
+
+def _source(name, fn, fares):
+    """Run one fare source; a failing source never stops the others."""
+    try:
+        got = [f for f in fn() if f.get("destination") and f.get("price")
+               and f.get("departure_at") and f.get("return_at")]
+        print(f"  {name}: {len(got)} fares")
+        fares.extend(got)
+    except Exception as exc:
+        print(f"  {name}: skipped ({exc})", file=sys.stderr)
+
+
 def fetch_fares(token):
-    """All cheap round trips from ORIGIN, one call per departure month."""
+    """Cheap round trips from ORIGIN, gathered from several API endpoints."""
     fares = []
-    for month in months_to_search():
-        for page in (1, 2):
-            params = {
-                "origin": ORIGIN,
-                "departure_at": month,
-                "one_way": "false",
-                "unique": "false",
-                "sorting": "price",
-                "currency": CURRENCY,
-                "limit": 1000,
-                "page": page,
-            }
-            resp = get_json(f"{API}/aviasales/v3/prices_for_dates", params, token)
+    months = months_to_search()
+    fresh_since = date.fromordinal(date.today().toordinal() - 7).isoformat()
+
+    def anywhere_by_month():
+        out = []
+        for month in months:
+            for page in (1, 2):
+                resp = get_json(f"{API}/aviasales/v3/prices_for_dates", {
+                    "origin": ORIGIN, "departure_at": month, "one_way": "false",
+                    "unique": "false", "sorting": "price", "currency": CURRENCY,
+                    "limit": 1000, "page": page}, token)
+                batch = resp.get("data") or []
+                out += [_from_v3(f) for f in batch]
+                if len(batch) < 1000:
+                    break
+                time.sleep(0.5)
+        return out
+
+    def latest_prices():
+        out = []
+        for page in range(1, 6):
+            resp = get_json(f"{API}/aviasales/v3/get_latest_prices", {
+                "origin": ORIGIN, "period_type": "year", "one_way": "false",
+                "sorting": "price", "currency": CURRENCY, "limit": 1000,
+                "page": page}, token)
             batch = resp.get("data") or []
-            print(f"  {month} page {page}: {len(batch)} fares")
-            fares.extend(batch)
+            for f in batch:
+                if (f.get("found_at") or "")[:10] < fresh_since:
+                    continue  # price seen too long ago to trust
+                stops = f.get("number_of_changes") or 0
+                out.append(_fare(f.get("destination"), f.get("value"), f.get("depart_date"),
+                                 f.get("return_date"), stops=stops, ret_stops=stops,
+                                 duration=f.get("duration")))
             if len(batch) < 1000:
                 break
-            time.sleep(1)
-    return fares
+            time.sleep(0.5)
+        return out
+
+    def cheapest_by_month():
+        out = []
+        for month in months:
+            resp = get_json(f"{API}/v1/prices/cheap", {
+                "origin": ORIGIN, "destination": "-", "depart_date": month,
+                "currency": CURRENCY}, token)
+            for dest, options in (resp.get("data") or {}).items():
+                for stops, f in options.items():
+                    out.append(_fare(dest, f.get("price"), f.get("departure_at"),
+                                     f.get("return_at"), f.get("airline"), int(stops),
+                                     int(stops)))
+            time.sleep(0.5)
+        return out
+
+    def popular_directions():
+        resp = get_json(f"{API}/v1/city-directions", {
+            "origin": ORIGIN, "currency": CURRENCY}, token)
+        return [_fare(dest, f.get("price"), f.get("departure_at"), f.get("return_at"),
+                      f.get("airline"), f.get("transfers"), f.get("transfers"))
+                for dest, f in (resp.get("data") or {}).items()]
+
+    _source("anywhere, by month", anywhere_by_month, fares)
+    _source("latest prices", latest_prices, fares)
+    _source("cheapest by month", cheapest_by_month, fares)
+    _source("popular directions", popular_directions, fares)
+
+    # Then search each destination on its own for many more dates.
+    targets = sorted((set(POPULAR) | {f["destination"] for f in fares}) - {ORIGIN, "YOW"})
+
+    def per_destination():
+        out = []
+        for dest in targets:
+            try:
+                resp = get_json(f"{API}/aviasales/v3/prices_for_dates", {
+                    "origin": ORIGIN, "destination": dest, "one_way": "false",
+                    "unique": "false", "sorting": "price", "currency": CURRENCY,
+                    "limit": 300}, token, retries=2)
+                out += [_from_v3(f) for f in resp.get("data") or []]
+            except Exception as exc:
+                print(f"    {dest}: skipped ({exc})", file=sys.stderr)
+            time.sleep(0.4)
+        return out
+
+    _source(f"{len(targets)} destinations one by one", per_destination, fares)
+
+    # The same trip often comes back from several sources: keep the cheapest.
+    best = {}
+    for f in fares:
+        key = (f["destination"], f["departure_at"][:10], f["return_at"][:10])
+        if key not in best or f["price"] < best[key]["price"] or (
+                f["price"] == best[key]["price"] and f["link"] and not best[key]["link"]):
+            best[key] = f
+    print(f"  {len(best)} unique trips after removing duplicates")
+    return list(best.values())
 
 
 def booking_link(fare):
@@ -192,6 +313,8 @@ def build_deals(fares, places, history, today_str):
         n = nights(f)
         if n is None or not (MIN_NIGHTS <= n <= MAX_NIGHTS) or not f.get("price"):
             continue
+        if f["departure_at"][:10] <= today_str:
+            continue  # already departed or leaving today
         dest = f.get("destination")
         if not dest or dest == ORIGIN:
             continue
